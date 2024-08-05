@@ -1,0 +1,462 @@
+:root {
+  --magenta: #19b354;
+  --light-magenta: #12d33cb6;
+  --magenta-transparent: #36ccd177;
+  --ligth-violet: #dd2727;
+  --ligth-violet-transparent: #b6c7d4af;
+  --dark-violet: #03264e;
+  --dark-violet-transparent: #d617176b;
+  --dark-violet2: #250000;
+  --dark-gray: #a18425;
+  --light-gray: #7f8487;
+  --white-color: #f8e9f8;
+  --transition: all 0.5s ease-in;
+}
+
+body {
+  background-color: rgb(25, 148, 76);
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/** NABVAR */
+.bg-custom {
+  background-color: var(--dark-violet2);
+}
+
+.navbar-brand img {
+  width: 200px;
+  height: 60px;
+}
+
+.navbar-toggler,
+.navbar-toggler-icon span {
+  background-color: var(--light-magenta) !important;
+}
+
+.nav-link {
+  color: var(--magenta) !important;
+  font-weight: 600 !important;
+}
+
+#nav-fav {
+  font-size: 10rem !important;
+}
+
+/** MAIN  */
+.main-home,
+.main-detail,
+.main-stats,
+.main-upcomming,
+.main-past,
+.main-contact {
+  background-color: rgb(190, 201, 202);
+  flex-grow: 1;
+}
+
+/*? Carousel */
+.carousel-inner,
+.carousel-item {
+  height: 200px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: var(--ligth-violet-transparent);
+  bottom: 3rem !important;
+}
+
+.carousel-caption h3 {
+  color: red;
+  font-size: 2rem;
+  width: 800;
+  text-shadow: -2px 2px 0px var(--dark-violet);
+}
+
+/** HOME */
+
+/*? Checkbox */
+.checks-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+#friendlyMessage {
+  background-color: rgb(127, 175, 207);
+  color: red;
+  display: none; /* Cambia esto a 'block' o 'inline-block' si quieres que sea visible */
+  font-size: 38px;
+  border: 22px solid rgb(116, 187, 192); /* Ajusta el grosor y color del borde */
+  padding: 10px; /* Espaciado interno para que el texto no esté pegado al borde */
+  text-align: center; /* Centra el texto dentro del div */
+  width: 50%; /* Ajusta el ancho del div según lo necesites */
+  margin: 0 auto; /* Centra el div horizontalmente */
+}
+.form-check-inline label {
+  color: red;
+  font-weight: 600;
+}
+.form-check-input {
+  border: 2px solid var(--dark-violet) !important;
+  background-color: var(--white-color);
+  text-align: center;
+  color: var(--magenta);
+}
+
+/*? Search */
+.d-inline-block {
+  margin: 1rem;
+}
+
+.input-group-text {
+  background-color: var(--dark-violet) !important;
+  color: var(--white-color) !important;
+  font-weight: 600 !important;
+}
+
+/*? Cards */
+#colcard {
+  perspective: 1000px;
+}
+#card {
+  background-color: transparent;
+  border: 1px solid var(--dark-violet-transparent) !important;
+  position: relative;
+  transition: var(--transition);
+}
+#card:hover {
+  background: radial-gradient(#ffffffdc, #19994e5d, red);
+  transform: scale(0.93);
+}
+
+.card-title {
+  color: var(--dark-violet) !important;
+  font-weight: 700 !important;
+}
+
+.card-img-top {
+  padding: 1rem;
+  height: 15rem;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.closed {
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/** FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+footer .hstack {
+  flex-direction: row;
+  background-color: rgb(25, 27, 25);
+  color: white;
+}
+
+.hstack {
+  padding: 2rem 1rem;
+}
+
+.hstack div a,
+footer > .hstack div .bi,
+.btn-send {
+  border: 2px solid var(--magenta);
+  color: var(--magenta);
+  background-color: transparent;
+  border-radius: 5px;
+  width: 3rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.hstack div a:hover,
+footer > .hstack div .bi:hover,
+.btn-send:hover {
+  color: var(--white-color) !important;
+  background-color: red;
+  border: 2px solid var(--dark-violet2);
+  font-weight: 600;
+}
+
+/** DETAIL */
+.card-content,
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+.card-content .card {
+  background-color: #7410105e;
+  border: none;
+  padding: 2rem 0;
+  margin: 1rem 0;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.77);
+}
+
+.card-content .card img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 2rem 0;
+  box-shadow: -1px 2px 20px var(--ligth-violet-transparent);
+  padding: 1rem;
+}
+
+.dataBody h4 {
+  margin: 2.5rem 0;
+  text-transform: uppercase;
+  text-align: center !important;
+  color: var(--dark-violet) !important;
+}
+
+.dataBody li {
+  list-style-type: none;
+  line-height: 2rem;
+  font-weight: 700;
+  color: var(--dark-violet);
+}
+
+.dataBody span {
+  color: var(--magenta);
+  padding-left: 0.1rem;
+}
+
+/** STATS */
+table {
+  margin-bottom: 0 !important;
+  margin-top: 2rem;
+}
+
+thead tr th {
+  background-color: var(--dark-gray) !important;
+  color: var(--ligth-violet) !important;
+  width: 33.33%;
+  font-size: 0.5rem;
+}
+
+tbody tr td {
+  height: 2rem;
+  width: 33.33%;
+  font-size: 0.8rem !important;
+}
+
+.table-hover tbody tr:hover td {
+  font-weight: 700;
+  background-color: var(--magenta-transparent);
+  color: var(--dark-violet2);
+}
+
+.table-hover tbody tr:hover th {
+  background-color: var(--dark-violet2);
+  color: var(--ligth-violet);
+}
+
+/* Estilos para las tarjetas */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  background: radial-gradient(#ffffffdc, #19994e5d, red);
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para efecto de elevación */
+}
+
+/** FORM */
+.form-content form {
+  background-color: var(--white-color);
+  border: none;
+}
+
+.form-label {
+  color: var(--dark-violet);
+  font-weight: 600;
+}
+
+.btn-send {
+  width: max-content;
+  align-items: end;
+  padding: 0.5rem 1rem;
+}
+
+/** MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .main-detail {
+    display: flex;
+    height: 67vh;
+  }
+  .card-content .card {
+    padding: 0 3rem;
+    justify-content: center;
+  }
+
+  .card-content .card img {
+    width: 100%;
+  }
+
+  .dataBody {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    line-height: 2rem;
+  }
+  .dataBody h4,
+  li {
+    align-content: start !important;
+  }
+
+  table {
+    font-size: 1.5rem;
+  }
+
+  table tr th {
+    text-align: start;
+    font-size: 0.9rem;
+  }
+  td {
+    font-size: 2rem !important;
+  }
+
+  .form-content form {
+    width: 40vw;
+    padding: 2rem 0;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .fav-aside {
+    right: 5rem;
+    z-index: 3;
+  }
+  #fav-aside {
+    display: none;
+  }
+
+  .closed {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse a {
+    border: 2px solid var(--magenta);
+    color: var(--magenta);
+    background-color: transparent;
+    border-radius: 5px;
+    width: max-content;
+    margin: 0 0.5rem;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 0.7rem;
+    transition: var(--transition);
+  }
+  .navbar-expand-lg .navbar-collapse a:hover {
+    color: var(--white-color) !important;
+    background-color: var(--dark-violet);
+    border: 2px solid var(--dark-violet);
+    font-weight: 600;
+  }
+
+  .navbar-collapse {
+    flex-grow: 0.1 !important;
+  }
+  .carousel-item img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .main-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dataBody {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+    line-height: 2rem;
+  }
+
+  .card-content .card .vr {
+    background-color: var(--dark-violet-transparent) !important;
+    opacity: 1 !important;
+  }
+
+  table {
+    font-size: 2rem;
+  }
+
+  table tr th {
+    text-align: start;
+    font-size: 1rem;
+  }
+  td {
+    font-size: 2rem !important;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  #fav-aside {
+    display: none;
+  }
+
+  .closed {
+    display: none;
+  }
+}
